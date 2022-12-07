@@ -1,0 +1,44 @@
+[Mon, 28 Nov 2022 11:39:24 +0700] [nukeviet.dev] [127.0.0.1] [Notice(8): Undefined index: demo] [FILE: /modules/demo/admin.menu.php] [LINE: 16] [TRACE:]
+#1  LINE: 182   FILE: /admin/index.php
+#2  LINE: 342   FILE: /admin/modules/edit.php
+#3  LINE: 296   FILE: /themes/admin_default/theme.php
+#4  LINE: 101   FILE: /themes/admin_default/theme.php
+
+[Mon, 28 Nov 2022 12:01:59 +0700] [nukeviet.dev] [127.0.0.1] [Error(1): Uncaught Error: Call to undefined method NukeViet\Core\Database::statement() in /var/www/nukeviet/modules/demo/admin/main.php:19
+Stack trace:
+#0 /var/www/nukeviet/admin/index.php(182): require()
+#1 {main}
+  thrown] [FILE: /modules/demo/admin/main.php] [LINE: 19]
+[Tue, 29 Nov 2022 04:13:29 +0700] [nukeviet.dev] [127.0.0.1] [Error(1): Uncaught Error: Call to undefined method NukeViet\Core\Request::get_init() in /var/www/nukeviet/modules/demo/admin/add.php:17
+Stack trace:
+#0 /var/www/nukeviet/admin/index.php(182): require()
+#1 {main}
+  thrown] [FILE: /modules/demo/admin/add.php] [LINE: 17]
+[Tue, 29 Nov 2022 04:36:51 +0700] [nukeviet.dev] [127.0.0.1] [Error(1): Uncaught Error: Call to undefined function stop() in /var/www/nukeviet/modules/demo/admin/add.php:15
+Stack trace:
+#0 /var/www/nukeviet/admin/index.php(182): require()
+#1 {main}
+  thrown] [FILE: /modules/demo/admin/add.php] [LINE: 15]
+[Tue, 29 Nov 2022 04:37:04 +0700] [nukeviet.dev] [127.0.0.1] [Warning(2): Use of undefined constant stop - assumed 'stop' (this will throw an Error in a future version of PHP)] [FILE: /modules/demo/admin/add.php] [LINE: 15] [TRACE:]
+#1  LINE: 182   FILE: /admin/index.php
+
+[Tue, 29 Nov 2022 04:38:32 +0700] [nukeviet.dev] [127.0.0.1] [Error(1): Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /var/www/nukeviet/vendor/vinades/nukeviet/Core/Database.php:529
+Stack trace:
+#0 /var/www/nukeviet/vendor/vinades/nukeviet/Core/Database.php(529): PDO->query()
+#1 /var/www/nukeviet/modules/demo/admin/add.php(16): NukeViet\Core\Database->query()
+#2 /var/www/nukeviet/admin/index.php(182): require('/var/www/nukevi...')
+#3 {main}
+  thrown] [FILE: /vendor/vinades/nukeviet/Core/Database.php] [LINE: 529]
+[Tue, 29 Nov 2022 04:39:53 +0700] [nukeviet.dev] [127.0.0.1] [Notice(8): Undefined offset: 0] [FILE: /modules/demo/admin/add.php] [LINE: 18] [TRACE:]
+#1  LINE: 182   FILE: /admin/index.php
+
+[Tue, 29 Nov 2022 06:48:54 +0700] [nukeviet.dev] [127.0.0.1] [Error(1): Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+            name, birthday, address
+        ) SET (
+            ?, ?, ?)' at line 1 in /var/www/nukeviet/vendor/vinades/nukeviet/Core/Database.php:562
+Stack trace:
+#0 /var/www/nukeviet/vendor/vinades/nukeviet/Core/Database.php(562): PDO->prepare()
+#1 /var/www/nukeviet/modules/demo/admin/add.php(43): NukeViet\Core\Database->prepare()
+#2 /var/www/nukeviet/admin/index.php(182): require('/var/www/nukevi...')
+#3 {main}
+  thrown] [FILE: /vendor/vinades/nukeviet/Core/Database.php] [LINE: 562]
